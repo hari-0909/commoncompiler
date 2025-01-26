@@ -27,7 +27,7 @@ const home = () => {
             </div>
         </div>
         <footer className="footer">
-            <h4>Built with 💗 by <a href="https://github.com/hari-0909"> hari-0909</a></h4>
+            <h4>Built with 💗 by &nbsp;<a href="https://github.com/hari-0909"> hari-0909</a></h4>
         </footer>
     </div>
   );
