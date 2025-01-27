@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-const home = () => {
+const Home = () => {
+    const [roomId, setRoomId] = useState('');
+    const [userName, setUserName] = useState('');
     const createNewRoom = (e) => {
         e.preventDefault();
         const id=uuidv4();
-        console.log(id);
-    }
+        setRoomId(id);
+    };
   return(
     <div className="homePagewrapper">
         <div className="formwrapper">
@@ -16,11 +18,14 @@ const home = () => {
                     type="text"
                     className="inputBox"
                     placeholder="Enter Room ID"
+                    onChange={(e)=>setRoomId(e.target.value)}
+                    value={roomId}
                 />
                 <input
                     type="text"
                     className="inputBox"
-                    value="USERNAME"
+                    onChange={(e)=>setUserName(e.target.value)}
+                    value={userName}
                 />
                 <button className="joinBtn">Join</button>
                 <span className="createInfo">
@@ -38,4 +43,4 @@ const home = () => {
   );
 };
 
-export default home
+export default Home
