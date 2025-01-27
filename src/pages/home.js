@@ -1,5 +1,6 @@
 import React,{ useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import toast from 'react-hot-toast'
 const Home = () => {
     const [roomId, setRoomId] = useState('');
     const [userName, setUserName] = useState('');
@@ -7,6 +8,8 @@ const Home = () => {
         e.preventDefault();
         const id=uuidv4();
         setRoomId(id);
+        toast.success('New room created successfully');
+        toast('Share the room id with your friends to invite them',{icon:'🚀'});
     };
   return(
     <div className="homePagewrapper">
@@ -43,4 +46,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
