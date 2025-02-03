@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Client from '../components/Client';
+import Editor from '../components/editor';
 
 const Editorpage = () => {
   const [clients,setClients]=useState([
     { socketId: 1, username: 'hari-0909'},
     { socketId: 2, username: 'angelina'},
+    { socketId: 3, username: 'brad pitt'},
   ]);
   return (
     <div className="mainWrap">
