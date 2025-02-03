@@ -20,6 +20,11 @@ const Home = () => {
         }
         navigate(`/editor/${roomId}`,{state:{userName:userName}});
     };
+    const handleInputEnter =(e)=>{
+        if(e.code=="Enter"){
+            joinRoom();
+        }
+    }
   return(
     <div className="homePagewrapper">
         <div className="formwrapper">
@@ -32,12 +37,14 @@ const Home = () => {
                     placeholder="Enter Room ID"
                     onChange={(e)=>setRoomId(e.target.value)}
                     value={roomId}
+                    onKeyUp={handleInputEnter}
                 />
                 <input
                     type="text"
                     className="inputBox"
                     onChange={(e)=>setUserName(e.target.value)}
                     value={userName}
+                    onKeyUp={handleInputEnter}
                 />
                 <button className="joinBtn" onClick={ joinRoom }>Join</button>
                 <span className="createInfo">
