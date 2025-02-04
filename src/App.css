@@ -47,6 +47,7 @@
   border-radius:5px;
   font-size: 5px;
   cursor:pointer;
+  font-weight:bold;
   transition:all 0.3s ease-in-out;
 }
 .joinBtn,.leaveBtn{
@@ -111,4 +112,10 @@
 .leaveBtn{
   width:100%;
   margin-top:20px;
+}
+.CodeMirror{
+  min-height: calc(100vh-20px);
+  font-size:20px;
+  line-height:1.6;
+  padding-top:20px;
 }
